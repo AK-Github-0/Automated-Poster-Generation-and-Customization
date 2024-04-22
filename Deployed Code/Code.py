@@ -5,6 +5,7 @@ import requests
 import time
 import random
 import os
+from streamlit.web import bootstrap
 
 gl_background_size = (1024, 1024)
 
@@ -163,6 +164,7 @@ def download_edited_poster(background_image):
         )
 
 if __name__ == "__main__":
+    bootstrap.run(script_path=None, command_line_flags=None)
     generator = BackgroundGenerator()
     generator.run()
     background_size = (1024, 1024)
